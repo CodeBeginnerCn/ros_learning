@@ -2,6 +2,7 @@
 import rospy
 from std_msgs.msg import String
 
+
 class talker():
     def __init__(self):
         rospy.init_node("talker", anonymous=False)
@@ -18,8 +19,9 @@ class talker():
             self.r.sleep()
 
     def shutdown(self):
-        
-        pass
+        rospy.loginfo('bye talker')
+        rospy.sleep(1.0)
+
 
 if __name__ == "__main__":
     obj = talker()
